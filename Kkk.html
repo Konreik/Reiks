@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reikon Fr - Web Developer</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #333;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 1em;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #countdown {
+      font-size: 28px;
+      margin: 20px 0;
+      color: #ff0000;
+    }
+
+    .social-buttons {
+      margin-top: 30px;
+    }
+
+    .social-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-button:hover {
+      background-color: #555;
+    }
+
+    .unique-button {
+      display: inline-block;
+      padding: 20px 40px;
+      background-color: #ff0000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 40px;
+      transition: background-color 0.3s ease;
+    }
+
+    .unique-button:hover {
+      background-color: #c70000;
+    }
+
+    .about-section {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .about-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .about-text-black {
+      color: #000;
+    }
+
+    .design-element {
+      border: 2px solid #ff0000;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: #888;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="font-size: 36px;">Reikon Fr</h1>
+  </header>
+
+  <div class="container">
+    <p style="font-size: 20px; color: black;">Welcome to my site!</p>
+
+    <div id="countdown"></div>
+
+    <div class="social-buttons">
+      <!-- Updated social buttons with provided links -->
+      <a href="https://www.instagram.com/reikonforreal?igsh=MWl4ZjUzemJlN21raw==" class="social-button" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@reikonsline?si=Tnu24l-o_g286ihc" class="social-button" target="_blank">YouTube</a>
+      <!-- Add more professional social buttons as needed -->
+    </div>
+
+    <a href="your-projects-page.html" class="unique-button">My Projects</a>
+
+    <div class="about-section">
+      <h2 class="about-text-black">About Me as a Web Developer</h2>
+      <p class="about-text about-text-black">
+        Welcome! I'm Reikon Fr, a dedicated web developer passionate about creating seamless digital experiences.
+        My focus includes designing and optimizing websites, implementing sophisticated solutions, and leveraging
+        technology to enhance the web. Let's collaborate on something extraordinary!
+      </p>
+
+      <div class="design-element">
+        <p style="font-weight: bold; color: #ff0000;" class="about-text-black">Web Development = Innovation + Problem Solving</p>
+        <p style="font-style: italic;" class="about-text-black">Embrace challenges, unlock creativity.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      This professional portfolio is crafted by Reikon. Every aspect, from concept to code, reflects my commitment
+      to excellence in web development. For feedback or inquiries, feel free to
+      <a href="anikiosan67@gmail.com" style="color: #ff0000; text-decoration: none;">reach out</a>.
+    </p>
+  </footer>
+
+  <script>
+    // Countdown to 2030
+    const targetDate = new Date("2030-01-01T00:00:00").getTime();
+
+    const countdown = setInterval(function () {
+      const currentDate = new Date().getTime();
+      const timeLeft = targetDate - currentDate;
+
+      const years = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 365));
+      const days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+
+      document.getElementById("countdown").innerHTML = `Countdown: ${years} years and ${days} days`;
+
+      if (timeLeft < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "Countdown expired!";
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
